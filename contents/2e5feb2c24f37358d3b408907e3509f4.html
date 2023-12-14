@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>apuntarseACurso(idCurso : String) : boolean</title>
+    <title>apuntarseAEvento(nombreEvento:String, idUsuario:String): boolean</title>
     <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic|Source+Code+Pro:300,400,700' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="../assets/css/bootstrap.css">
 <link rel="stylesheet" href="../assets/css/jquery.bonsai.css">
@@ -19,7 +19,7 @@
 
       <!-- Name Title -->
 
-      <h1>apuntarseACurso(idCurso : String) : boolean</h1>
+      <h1>apuntarseAEvento(nombreEvento:String, idUsuario:String): boolean</h1>
 
       <!-- Type and Stereotype -->
 
@@ -44,7 +44,7 @@
           <span class="label label-info"><a href='d3330e7f7e9750062f3bf3c7dd3365fc.html'><span class='node-icon staruml-icon icon-UMLModel'></span>Diagramas de Actividad</a></span>
         
           <span>::</span>
-          <span class="label label-info"><a href='2e5feb2c24f37358d3b408907e3509f4.html'><span class='node-icon staruml-icon icon-UMLActivity'></span>apuntarseACurso(idCurso : String) : boolean</a></span>
+          <span class="label label-info"><a href='2e5feb2c24f37358d3b408907e3509f4.html'><span class='node-icon staruml-icon icon-UMLActivity'></span>apuntarseAEvento(nombreEvento:String, idUsuario:String): boolean</a></span>
         
       </section>
 
@@ -193,7 +193,7 @@
         
         <li><a href='38f1dd9c7b8bf27f4b945e7a18b0359a.html'><span class='node-icon staruml-icon icon-UMLAction'></span>obtener comunidad anfitriona del evento</a></li>
         
-        <li><a href='8458739c7da3727fe04aa760ca9cfd50.html'><span class='node-icon staruml-icon icon-UMLAction'></span>fechaActual &lt; fechaInicio</a></li>
+        <li><a href='8458739c7da3727fe04aa760ca9cfd50.html'><span class='node-icon staruml-icon icon-UMLAction'></span>comprobar fechaActual &lt; evento.fechaInicio</a></li>
         
         <li><a href='73b45f287a49926b45ecd9ab82d7b688.html'><span class='node-icon staruml-icon icon-UMLJoinNode'></span>JoinNode1</a></li>
         
@@ -221,6 +221,14 @@
         
         <li><a href='0fed46a79dfbe5dd56d3c9f3ceb4d95c.html'><span class='node-icon staruml-icon icon-UMLActivityFinalNode'></span>ActivityFinalNode1</a></li>
         
+        <li><a href='462704a67916da08eeea590e6298495c.html'><span class='node-icon staruml-icon icon-UMLInitialNode'></span>InitialNode1</a></li>
+        
+        <li><a href='ffbebe3fe989e2fb2954071a6644fd03.html'><span class='node-icon staruml-icon icon-UMLInitialNode'></span>InitialNode2</a></li>
+        
+        <li><a href='989daf5b988a9af664dab0bb324bdc04.html'><span class='node-icon staruml-icon icon-UMLInitialNode'></span>InitialNode3</a></li>
+        
+        <li><a href='1f756a013975d96f33e8322652966f84.html'><span class='node-icon staruml-icon icon-UMLInitialNode'></span>InitialNode4</a></li>
+        
     </ul>
 </section>
 
@@ -236,15 +244,15 @@
         
         <li><a href='da4d62d83bf77f0ca4c23d90ab268c9c.html'><span class='node-icon staruml-icon icon-UMLControlFlow'></span>(ForkNode1→obtener comunidad anfitriona del evento)</a></li>
         
-        <li><a href='2c6f479139f3a84075448a0f264a9e87.html'><span class='node-icon staruml-icon icon-UMLControlFlow'></span>(ForkNode1→fechaActual &lt; fechaInicio)</a></li>
+        <li><a href='2c6f479139f3a84075448a0f264a9e87.html'><span class='node-icon staruml-icon icon-UMLControlFlow'></span>(ForkNode1→comprobar fechaActual &lt; evento.fechaInicio)</a></li>
         
         <li><a href='6bce983085ead1c255e4600eaa8c7abf.html'><span class='node-icon staruml-icon icon-UMLControlFlow'></span>(obtener comunidad anfitriona del evento→comprobar si el ususario esta en la comunidad)</a></li>
         
-        <li><a href='1f0e8b31925f1bbf32e2e5b04ec16d23.html'><span class='node-icon staruml-icon icon-UMLControlFlow'></span>(ForkNode1→e)</a></li>
+        <li><a href='1f0e8b31925f1bbf32e2e5b04ec16d23.html'><span class='node-icon staruml-icon icon-UMLControlFlow'></span>(ForkNode1→evento)</a></li>
         
-        <li><a href='5e11915a6cb9c7bcc7c979d025dc57e9.html'><span class='node-icon staruml-icon icon-UMLControlFlow'></span>(e→ForkNode1)</a></li>
+        <li><a href='5e11915a6cb9c7bcc7c979d025dc57e9.html'><span class='node-icon staruml-icon icon-UMLControlFlow'></span>(evento→ForkNode1)</a></li>
         
-        <li><a href='b9efd01e80dff98edcc2c62a13496a8c.html'><span class='node-icon staruml-icon icon-UMLControlFlow'></span>(c→c)</a></li>
+        <li><a href='b9efd01e80dff98edcc2c62a13496a8c.html'><span class='node-icon staruml-icon icon-UMLControlFlow'></span>(comunidad→comunidad)</a></li>
         
         <li><a href='0ed9c968d9811902b733a49e5fc4b124.html'><span class='node-icon staruml-icon icon-UMLObjectFlow'></span>(in nombreEvento: String→obtener evento)</a></li>
         
@@ -252,9 +260,9 @@
         
         <li><a href='95427f692208b6d9bcd8d412f07a9d81.html'><span class='node-icon staruml-icon icon-UMLControlFlow'></span>(in idUsuario: String→obtener usuario)</a></li>
         
-        <li><a href='491702beb4a5781ff3ba199c0f9271a6.html'><span class='node-icon staruml-icon icon-UMLControlFlow'></span>(u→ForkNode2)</a></li>
+        <li><a href='491702beb4a5781ff3ba199c0f9271a6.html'><span class='node-icon staruml-icon icon-UMLControlFlow'></span>(usuario→ForkNode2)</a></li>
         
-        <li><a href='628821a6e9b754ff671d9f38c28246fd.html'><span class='node-icon staruml-icon icon-UMLControlFlow'></span>(ForkNode2→u)</a></li>
+        <li><a href='628821a6e9b754ff671d9f38c28246fd.html'><span class='node-icon staruml-icon icon-UMLControlFlow'></span>(ForkNode2→usuario)</a></li>
         
         <li><a href='0c75f3aa1f0fd5a1a8ef917ca3b47fc5.html'><span class='node-icon staruml-icon icon-UMLControlFlow'></span>(result→DecisionNode1)</a></li>
         
@@ -262,11 +270,11 @@
         
         <li><a href='31a849f8056eba8f18f847170827ed11.html'><span class='node-icon staruml-icon icon-UMLObjectFlow'></span>(escribir falso→out : boolean)</a></li>
         
-        <li><a href='41b693f6a057381af12df6f3fda4e832.html'><span class='node-icon staruml-icon icon-UMLControlFlow'></span>[true] (DecisionNode1→fechaActual &lt; fechaInicio)</a></li>
+        <li><a href='41b693f6a057381af12df6f3fda4e832.html'><span class='node-icon staruml-icon icon-UMLControlFlow'></span>[true] (DecisionNode1→comprobar fechaActual &lt; evento.fechaInicio)</a></li>
         
-        <li><a href='35d3e3d4fee6f150ae5a2ca0f1ccd324.html'><span class='node-icon staruml-icon icon-UMLControlFlow'></span>(ForkNode2→u)</a></li>
+        <li><a href='35d3e3d4fee6f150ae5a2ca0f1ccd324.html'><span class='node-icon staruml-icon icon-UMLControlFlow'></span>(ForkNode2→usuario)</a></li>
         
-        <li><a href='97803e640f5c21a9b013f9667250ae33.html'><span class='node-icon staruml-icon icon-UMLControlFlow'></span>(ForkNode1→e)</a></li>
+        <li><a href='97803e640f5c21a9b013f9667250ae33.html'><span class='node-icon staruml-icon icon-UMLControlFlow'></span>(ForkNode1→evento)</a></li>
         
         <li><a href='df54bc621a034f15938d97f02112fb7a.html'><span class='node-icon staruml-icon icon-UMLControlFlow'></span>(result→DecisionNode2)</a></li>
         
@@ -279,6 +287,18 @@
         <li><a href='d7210f861e73b3c3ccfce4f651acdfdc.html'><span class='node-icon staruml-icon icon-UMLControlFlow'></span>(escribir verdadero→out : boolean)</a></li>
         
         <li><a href='b20ebe8a38965450f85fc2ee0834e671.html'><span class='node-icon staruml-icon icon-UMLControlFlow'></span>(inscribir usuario al evento→escribir verdadero)</a></li>
+        
+        <li><a href='263a3b26781eab224ee8454e125546fe.html'><span class='node-icon staruml-icon icon-UMLControlFlow'></span>(ForkNode2→usuario)</a></li>
+        
+        <li><a href='fb982846a2f10f43c98d96a16c2fc509.html'><span class='node-icon staruml-icon icon-UMLControlFlow'></span>(ForkNode1→evento)</a></li>
+        
+        <li><a href='9ad0d93b87791bd561a58f7021e1cda7.html'><span class='node-icon staruml-icon icon-UMLControlFlow'></span>[false] (DecisionNode2→escribir falso)</a></li>
+        
+        <li><a href='3da910c0d67543ec3e83230422d773e7.html'><span class='node-icon staruml-icon icon-UMLControlFlow'></span>(InitialNode3→obtener comunidad anfitriona del evento)</a></li>
+        
+        <li><a href='5f9c4206a4f2dbfee1f3fdeb29b76411.html'><span class='node-icon staruml-icon icon-UMLControlFlow'></span>(InitialNode1→obtener usuario)</a></li>
+        
+        <li><a href='2b2d66025389626e77f51655077d5d58.html'><span class='node-icon staruml-icon icon-UMLControlFlow'></span>(InitialNode4→obtener evento)</a></li>
         
     </ul>
 </section>
@@ -345,7 +365,7 @@
     
     <tr>
         <td>name</td>
-        <td>apuntarseACurso(idCurso : String) : boolean</td>
+        <td>apuntarseAEvento(nombreEvento:String, idUsuario:String): boolean</td>
     </tr>
     
     

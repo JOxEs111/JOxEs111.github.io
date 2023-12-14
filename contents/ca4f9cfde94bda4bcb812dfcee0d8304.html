@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>apuntarseACurso</title>
+    <title>apuntarseACurso(idCurso: String): boolean</title>
     <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic|Source+Code+Pro:300,400,700' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="../assets/css/bootstrap.css">
 <link rel="stylesheet" href="../assets/css/jquery.bonsai.css">
@@ -19,7 +19,7 @@
 
       <!-- Name Title -->
 
-      <h1>apuntarseACurso</h1>
+      <h1>apuntarseACurso(idCurso: String): boolean</h1>
 
       <!-- Type and Stereotype -->
 
@@ -44,7 +44,7 @@
           <span class="label label-info"><a href='d3330e7f7e9750062f3bf3c7dd3365fc.html'><span class='node-icon staruml-icon icon-UMLModel'></span>Diagramas de Actividad</a></span>
         
           <span>::</span>
-          <span class="label label-info"><a href='ca4f9cfde94bda4bcb812dfcee0d8304.html'><span class='node-icon staruml-icon icon-UMLActivity'></span>apuntarseACurso</a></span>
+          <span class="label label-info"><a href='ca4f9cfde94bda4bcb812dfcee0d8304.html'><span class='node-icon staruml-icon icon-UMLActivity'></span>apuntarseACurso(idCurso: String): boolean</a></span>
         
       </section>
 
@@ -217,6 +217,10 @@
         
         <li><a href='e14143955a24ca3abf5ea208e184ff50.html'><span class='node-icon staruml-icon icon-UMLForkNode'></span>ForkNode1</a></li>
         
+        <li><a href='c35ae8933e5a1b62993aa25d85cfbd1a.html'><span class='node-icon staruml-icon icon-UMLMergeNode'></span>MergeNode1</a></li>
+        
+        <li><a href='4919a49425ed34d11520a44b283660d8.html'><span class='node-icon staruml-icon icon-UMLForkNode'></span>ForkNode2</a></li>
+        
     </ul>
 </section>
 
@@ -228,13 +232,13 @@
     <h3>Edges</h3>
     <ul class="nav nav-list">
         
-        <li><a href='4392f77ba5d6adf11deca77c90942166.html'><span class='node-icon staruml-icon icon-UMLControlFlow'></span>true (DecisionNode1→realizaPago(curso.precio))</a></li>
+        <li><a href='4392f77ba5d6adf11deca77c90942166.html'><span class='node-icon staruml-icon icon-UMLControlFlow'></span>(DecisionNode1→realizaPago(curso.precio))</a></li>
         
-        <li><a href='79415e20b20c89084fdcd91ad68cc57b.html'><span class='node-icon staruml-icon icon-UMLControlFlow'></span>false (DecisionNode1→Mensaje de Error)</a></li>
+        <li><a href='79415e20b20c89084fdcd91ad68cc57b.html'><span class='node-icon staruml-icon icon-UMLControlFlow'></span>(DecisionNode1→MergeNode1)</a></li>
         
-        <li><a href='d07008f3b47b50c6d71c7822afe71e49.html'><span class='node-icon staruml-icon icon-UMLControlFlow'></span>false (DecisionNode2→Mensaje de Error)</a></li>
+        <li><a href='d07008f3b47b50c6d71c7822afe71e49.html'><span class='node-icon staruml-icon icon-UMLControlFlow'></span>(DecisionNode2→MergeNode1)</a></li>
         
-        <li><a href='d69ae38a9084af1e30c541dd37e3a478.html'><span class='node-icon staruml-icon icon-UMLControlFlow'></span>true (DecisionNode2→numAlumnos += 1)</a></li>
+        <li><a href='d69ae38a9084af1e30c541dd37e3a478.html'><span class='node-icon staruml-icon icon-UMLControlFlow'></span>(DecisionNode2→numAlumnos += 1)</a></li>
         
         <li><a href='e46b01480cbc264194a02423c28e7f52.html'><span class='node-icon staruml-icon icon-UMLControlFlow'></span>(in idCurso: String→obtener curso)</a></li>
         
@@ -246,8 +250,6 @@
         
         <li><a href='893dbcf8124630e80c4765b82e403dbb.html'><span class='node-icon staruml-icon icon-UMLControlFlow'></span>(ForkNode1→curso)</a></li>
         
-        <li><a href='6b17127b392108d961c4d74a6ee608ef.html'><span class='node-icon staruml-icon icon-UMLControlFlow'></span>(numAlumnos→numAlumnos)</a></li>
-        
         <li><a href='0deeda20ff8df58fb2763da6fb54f0f5.html'><span class='node-icon staruml-icon icon-UMLControlFlow'></span>(capacidadMax→capacidadMax)</a></li>
         
         <li><a href='4e1017d868c3de9e1f41b30baeeb5799.html'><span class='node-icon staruml-icon icon-UMLControlFlow'></span>(comprobar numAlumnos &lt; capacidadMax→DecisionNode1)</a></li>
@@ -258,13 +260,21 @@
         
         <li><a href='7dcda665b480de15f86d43cf754fa89e.html'><span class='node-icon staruml-icon icon-UMLControlFlow'></span>(Mensaje de Error→ActivityFinalNode1)</a></li>
         
-        <li><a href='cafda3eb34bd34f86a8d0778d2aaed23.html'><span class='node-icon staruml-icon icon-UMLControlFlow'></span>true (Mensaje de Éxito→out apuntado: boolean)</a></li>
+        <li><a href='cafda3eb34bd34f86a8d0778d2aaed23.html'><span class='node-icon staruml-icon icon-UMLControlFlow'></span>(Mensaje de Éxito→out apuntado: boolean)</a></li>
         
-        <li><a href='7108a247ab84d64cf73c03150cba4f49.html'><span class='node-icon staruml-icon icon-UMLControlFlow'></span>false (Mensaje de Error→out apuntado: boolean)</a></li>
+        <li><a href='7108a247ab84d64cf73c03150cba4f49.html'><span class='node-icon staruml-icon icon-UMLControlFlow'></span>(Mensaje de Error→out apuntado: boolean)</a></li>
         
         <li><a href='fbea667ee7f42273e3faf5e876ddc671.html'><span class='node-icon staruml-icon icon-UMLControlFlow'></span>(numAlumnos += 1→Mensaje de Éxito)</a></li>
         
         <li><a href='15887f265cb563270a1918cdf6f5ca30.html'><span class='node-icon staruml-icon icon-UMLControlFlow'></span>(ForkNode1→curso)</a></li>
+        
+        <li><a href='ba4f8d3df48757daae9e4e83ce8e7be0.html'><span class='node-icon staruml-icon icon-UMLControlFlow'></span>(MergeNode1→Mensaje de Error)</a></li>
+        
+        <li><a href='8e1f0ba91658ad912bbe749e8a1ff125.html'><span class='node-icon staruml-icon icon-UMLControlFlow'></span>(ForkNode2→numAlumnos)</a></li>
+        
+        <li><a href='39a32a321d848378db64b12255ac65a0.html'><span class='node-icon staruml-icon icon-UMLControlFlow'></span>(ForkNode2→numAlumnos)</a></li>
+        
+        <li><a href='f33bcfc52370265ffe2c48f29c62847e.html'><span class='node-icon staruml-icon icon-UMLControlFlow'></span>(numAlumnos→ForkNode2)</a></li>
         
     </ul>
 </section>
@@ -331,7 +341,7 @@
     
     <tr>
         <td>name</td>
-        <td>apuntarseACurso</td>
+        <td>apuntarseACurso(idCurso: String): boolean</td>
     </tr>
     
     
